@@ -30,11 +30,6 @@ action :create do
     )
   end
 
-  firewall_rule "nginx-#{ new_resource.listen }" do
-    port "#{ new_resource.listen }".to_i
-    protocol :tcp
-    action :allow
-  end
 end
 
 action :delete do
